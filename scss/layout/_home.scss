@@ -1,0 +1,357 @@
+.news {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: calc(2.1875rem + 2vw) 8vw calc(6.1875rem + 2vw);
+  background-color: $black;
+  color: $white;
+
+  @include breakpoint-up(iPadPro) {
+    padding: calc(8.1875rem + 2vw) 8vw;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: calc(6.1875rem + 2vw) 8vw;
+  }
+
+  &__title {
+    font-size: $_22px;
+    font-weight: 400;
+    text-align: center;
+
+    @include breakpoint-up(desktop) {
+      font-size: $_40px;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__cards {
+    row-gap: $_60px;
+
+    @include breakpoint-up(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2.5rem;
+    }
+
+    @include breakpoint-up(iPadPro) {
+      padding: 0 0 0 4vw;
+      column-gap: 6rem;
+    }
+
+    &__card {
+      &:first-child {
+        margin-top: $_40px;
+      }
+
+      @include breakpoint-up(tablet) {
+        &:first-child,
+        &:nth-child(2) {
+          margin-top: $_20px;
+        }
+
+        display: block;
+      }
+
+      border-top: 1px solid $white;
+      padding-top: $_26px;
+
+      .project__news & {
+        border-top: 2px solid $black;
+      }
+
+      @include breakpoint-up(tablet) {
+        column-gap: 1.5rem;
+      }
+
+      @include breakpoint-up(iPadPro) {
+        padding-bottom: $_50px;
+      }
+
+      &__image {
+        height: 12.375rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include breakpoint-down(phone) {
+          height: 10.375rem;
+          width: 100%;
+        }
+
+        @include breakpoint-up(tablet) {
+          height: 12.375rem;
+        }
+
+        @include breakpoint-up(desktop) {
+          height: 19.625rem;
+          width: 100%;
+        }
+
+        @include breakpoint-up(large) {
+          height: 23.625rem;
+          width: 100%;
+        }
+      }
+
+      h2 {
+        margin: 1rem 0 0 0;
+        position: relative;
+
+        font-family: $portoSansStencil;
+        font-size: $_18px;
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+        font-weight: 400;
+
+        .project__news & {
+          color: $black;
+          font-family: $portoSans;
+        }
+
+        @include breakpoint-up(tablet) {
+          margin: 1rem 0 2rem;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        @include breakpoint-up(iPadPro) {
+          margin: 1rem 0 2rem;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        @include breakpoint-up(desktop) {
+          font-size: $_24px;
+        }
+
+        @include breakpoint-up(large) {
+          font-size: $_28px;
+        }
+      }
+
+      .cut {
+        margin: 2rem 0 0 0;
+        font-family: $portoSans;
+        font-size: $_16px;
+        line-height: 1.5;
+        font-weight: 100;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        .project__news & {
+          color: $black;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+        }
+
+        @include breakpoint-up(tablet) {
+          margin: 0;
+        }
+
+        @include breakpoint-up(desktop) {
+          font-size: $_20px;
+          // margin: auto 0 0 0;
+          line-height: 1.7;
+        }
+
+        @include breakpoint-up(large) {
+          font-size: $_22px;
+        }
+      }
+
+      .date {
+        font-size: $_15px;
+        font-style: italic;
+        color: $grey;
+        margin: 2rem 0 0 0;
+
+        @include breakpoint-up(desktop) {
+          font-size: $_16px;
+        }
+
+        @include breakpoint-up(large) {
+          font-size: $_18px;
+        }
+      }
+
+      button {
+        position: relative;
+        color: $orange;
+        margin: 2rem 0 0 0;
+        font-size: $_15px;
+
+        background-color: transparent;
+        border: none;
+        transition: all 0.5s ease;
+
+        cursor: pointer;
+
+        @include breakpoint-up(desktop) {
+          font-size: $_16px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: calc(50% - 1px);
+          left: -20px;
+          background-color: $orange;
+          height: 2px;
+          width: 16px;
+          transition: all 0.5s ease;
+        }
+
+        &:hover::before {
+          left: -32px;
+        }
+
+        &:hover {
+          letter-spacing: 0.4px;
+        }
+      }
+    }
+  }
+}
+
+.testimonials {
+  position: relative;
+  width: 100%;
+  padding: calc(2.1875rem + 2vw) 8vw 0;
+  color: $black;
+
+  @include breakpoint-up(iPadPro) {
+    padding: calc(8.1875rem + 2vw) 6vw 0;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: calc(6.1875rem + 2vw) 8vw 0;
+  }
+
+  &__title {
+    font-size: $_20px;
+    font-weight: 400;
+    text-align: center;
+
+    @include breakpoint-up(iPadPro) {
+      font-size: $_40px;
+    }
+  }
+
+  .alert {
+    color: rgba($color: $black, $alpha: 0.5);
+    text-align: center;
+    margin: 2rem 0;
+
+    @include breakpoint-up(desktop) {
+      margin: 4rem 0;
+      font-size: $_30px;
+    }
+
+    span {
+      color: $orange;
+    }
+  }
+
+  &__cards {
+    row-gap: $_60px;
+
+    @include breakpoint-up(iPadPro) {
+      padding: 0 0;
+    }
+
+    @include breakpoint-up(desktop) {
+      padding: 0 6vw;
+    }
+
+    @include breakpoint-up(large) {
+      padding: 0 10vw;
+    }
+
+    &__card {
+      &:first-child {
+        margin-top: calc(40px + 2.325rem);
+
+        @include breakpoint-up(desktop) {
+          margin-top: $_110px;
+        }
+      }
+
+      position: relative;
+      z-index: -1;
+      display: flex;
+      flex-direction: column;
+      height: 20rem;
+
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      border-top: 3px solid $orange;
+      padding: calc(calc(4.325rem / 2) + calc(3.125rem / 8)) 1.25rem 3.125rem;
+      margin: 30px 5px 15px;
+
+      @include breakpoint-up(iPadPro) {
+        box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.1);
+        padding: calc(calc(4.325rem / 2) + calc(3.125rem / 8)) 2rem 3.125rem;
+      }
+
+      img {
+        border-radius: 50%;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: calc(4.325rem / -2);
+        transform: translateX(-50%);
+        width: 4.325rem;
+        box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      h3,
+      h4 {
+        text-align: center;
+        font-size: $_17px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+      }
+
+      h3 {
+        font-family: $portoSerif;
+        margin: 1.25rem 0 0.5rem;
+      }
+
+      h4 {
+        margin: 0 0 1.875rem 0;
+        font-family: $portoSans;
+        font-style: italic;
+        color: $grey;
+      }
+
+      &__text {
+        // position: relative;
+        // z-index: -50;
+        // max-height: 8.75rem;
+        // overflow-y: auto;
+
+        p {
+          letter-spacing: 0.3px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

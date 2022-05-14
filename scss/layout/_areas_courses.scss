@@ -1,0 +1,194 @@
+.areas_information,
+.courses_information {
+  background-color: $black;
+  margin-top: calc(4.1875rem + 2vw);
+  padding: calc(6.1875rem + 2vw) 2rem;
+
+  @include breakpoint-up(tablet) {
+    padding: calc(6.1875rem + 2vw) 8vw;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: calc(6.1875rem + 2vw) 11vw;
+  }
+
+  @include breakpoint-up(large) {
+    padding: calc(6.1875rem + 2vw) 10vw;
+  }
+
+  &__info {
+    line-height: 1.7;
+    font-size: $_18px;
+
+    color: $white;
+
+    @include breakpoint-up(iPadPro) {
+      font-size: $_18px;
+      line-height: 1.7;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_22px;
+    }
+  }
+
+  &__icons {
+    margin-top: 4rem;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-items: center;
+
+    @include breakpoint-up(tablet) {
+      margin-top: 6rem;
+    }
+
+    @include breakpoint-up(iPadPro) {
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 3rem;
+    }
+
+    @include breakpoint-up(desktop) {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 6rem;
+    }
+
+    @include breakpoint-up(large) {
+      column-gap: 8rem;
+    }
+
+    &__card {
+      width: 100%;
+
+      &__img {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include breakpoint-up(tablet) {
+          width: 2.875rem;
+          height: 2.875rem;
+        }
+
+        @include breakpoint-up(large) {
+          width: 3.125rem;
+          height: 3.125rem;
+        }
+      }
+
+      h4 {
+        width: fit-content;
+        text-align: center;
+        font-weight: 400;
+        color: $grey;
+
+        @include breakpoint-up(tablet) {
+          font-size: $_17px;
+        }
+
+        @include breakpoint-up(large) {
+          font-size: $_18px;
+        }
+      }
+
+      &:hover h4 {
+        color: $white;
+      }
+    }
+  }
+}
+
+.areas,
+.courses,
+.section {
+  background-color: $white;
+  padding: calc(6.1875rem + 2vw) 0 0;
+  width: 100%;
+
+  .sub__header__title {
+    margin-left: 2rem;
+
+    @include breakpoint-up(tablet) {
+      margin-left: 8vw;
+    }
+
+    @include breakpoint-up(desktop) {
+      margin-left: 11vw;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: 10vw;
+    }
+  }
+
+  &__grid {
+    // row-gap: 2rem;
+
+    @include breakpoint-down(phone) {
+      row-gap: 0;
+    }
+
+    @include breakpoint-up(tablet) {
+      padding: 0 8vw;
+    }
+
+    @include breakpoint-up(desktop) {
+      padding: 0 11vw;
+    }
+
+    @include breakpoint-up(large) {
+      padding: 0 10vw;
+    }
+  }
+
+  textarea {
+    padding: 12px 26px;
+    margin-right: 3.125rem;
+    border-radius: 2px;
+    font-family: $portoSans;
+    color: $black;
+    font-size: $_15px;
+    border: 1px solid rgba($color: $black, $alpha: 0.3);
+    background-color: transparent;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 1px solid rgba($color: $orange, $alpha: 1);
+    }
+  }
+
+  .add_card,
+  .remove_card {
+    margin-right: 2rem;
+    padding: 0.84375rem 1.625rem;
+    text-transform: uppercase;
+    border: none;
+    font-size: $_15px;
+    font-family: $portoSans;
+    letter-spacing: 0.2px;
+    border-radius: 10px;
+  }
+
+  .add_card {
+    background-color: $orange;
+    color: $white;
+  }
+
+  .remove_card {
+    background-color: rgba($color: $grey, $alpha: 0.25);
+    color: $black;
+  }
+}
+
+.section {
+  position: relative;
+  padding: calc(6.1875rem + 2vw) 0;
+}
+
+.areas {
+  padding: calc(6.1875rem + 2vw) 0;
+}

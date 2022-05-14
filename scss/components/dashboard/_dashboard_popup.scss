@@ -1,0 +1,167 @@
+.admin_delete_popup,
+.admin_edit_popup,
+.admin_add_media_popup,
+.admin_add_focus_popup,
+.admin_edit_focus_popup,
+.admin_delete_focus_popup,
+.admin_edit_img_focus_popup,
+.add_partner,
+.add_investor,
+.add_review,
+.remove_review,
+.change_status,
+.edit_entity_popup,
+.entity_img_popup,
+.add_team {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: $white;
+  border-radius: 24px;
+
+  padding: 56px 100px;
+
+  text-align: center;
+  font-family: $portoSans;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.4s;
+
+  &.show_popup {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: $_20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 4rem;
+
+    span {
+      color: $orange;
+      font-weight: 500;
+    }
+  }
+
+  hr {
+    margin: 2rem auto 4rem;
+
+    background-color: $grey;
+    height: 1.5px;
+    width: 12%;
+    border: none;
+  }
+
+  &__confirm,
+  &__cancel {
+    padding: 10px 30px;
+
+    border-radius: 10px;
+    font-size: $_15px;
+  }
+
+  &__confirm {
+    margin-right: 40px;
+    border: 1px solid $orange;
+    background-color: $orange;
+    color: $white;
+  }
+
+  &__cancel {
+    border: 1px solid $black;
+    background-color: transparent;
+    color: $black;
+  }
+}
+
+.admin_edit_popup,
+.admin_add_media_popup {
+  width: 36vw;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  input {
+    margin: 4rem 0;
+    width: fit-content;
+    padding: 12px 26px;
+    font-family: $portoSans;
+    font-size: $_15px;
+    border: 1px solid rgba($color: $black, $alpha: 0.3);
+  }
+}
+
+.admin_medias__popup {
+  width: 40%;
+}
+
+.admin_add_media_popup {
+  input {
+    margin: 3rem 0;
+  }
+}
+
+.admin_add_focus_popup,
+.admin_edit_focus_popup,
+.admin_edit_img_focus_popup,
+.add_partner,
+.change_status,
+.edit_entity_popup,
+.add_investor,
+.add_review,
+.remove_review,
+.entity_img_popup,
+.add_team {
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    text-align: left;
+  }
+
+  input,
+  select {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 12px 26px;
+    font-family: $portoSans;
+    font-size: $_15px;
+    border: 1px solid rgba($color: $black, $alpha: 0.3);
+
+    &:last-child {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.add_review {
+  .review_form {
+    text-align: left;
+    column-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+
+    input,
+    textarea {
+      margin: 1rem 0;
+      width: 100%;
+      padding: 12px 26px;
+      font-family: $portoSans;
+      font-size: $_15px;
+      border: 1px solid rgba($color: $black, $alpha: 0.3);
+    }
+
+    .custom-file-upload {
+      margin-top: 0.5rem;
+      margin-bottom: 4rem;
+    }
+  }
+}

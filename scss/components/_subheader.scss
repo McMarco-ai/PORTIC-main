@@ -1,0 +1,140 @@
+.subheader {
+  // position: absolute;
+  // top: 0%;
+  // left: 0%;
+  // z-index: 988;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background-color: $white;
+  background-color: $black;
+  color: $white;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include breakpoint-down(phone) {
+    padding: 0.75rem 1.25rem;
+  }
+
+  @include breakpoint-up(tablet) {
+    padding: 1.25rem;
+  }
+
+  @include breakpoint-up(iPadPro) {
+    padding: 1.25rem 1.5rem;
+  }
+
+  @include breakpoint-up(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.4rem 5rem;
+  }
+
+  &__contacts {
+    justify-self: start;
+
+    .email,
+    .phone {
+      cursor: pointer;
+
+      &:hover i,
+      &:hover a {
+        color: $orange;
+      }
+    }
+
+    i {
+      margin-right: $_14px;
+      font-size: $_15px;
+
+      @include breakpoint-up(desktop) {
+        font-size: $_14px;
+      }
+
+      &.fa-phone-volume {
+        margin-left: $_40px;
+      }
+    }
+
+    a {
+      font-size: $_15px;
+      margin: 0;
+      color: $white;
+
+      @include breakpoint-up(desktop) {
+        font-size: $_14px;
+      }
+    }
+  }
+
+  &__socials {
+    @include breakpoint-up(desktop) {
+      justify-self: center;
+    }
+
+    @include breakpoint-up(desktop) {
+      font-size: $_14px;
+    }
+
+    a {
+      font-size: $_15px;
+      color: $black;
+      color: $white;
+      margin-right: $_20px;
+
+      @include breakpoint-up(desktop) {
+        font-size: $_14px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  &__languages {
+    justify-self: end;
+
+    button {
+      margin: 0;
+      font-size: $_15px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: $white;
+
+      &:first-child {
+        padding-right: $_14px;
+      }
+
+      &:last-child {
+        padding-left: $_14px;
+      }
+
+      &.selected {
+        opacity: 0.69;
+      }
+
+      &:not(.selected) {
+        &:hover {
+          color: $orange;
+        }
+      }
+
+      @include breakpoint-up(desktop) {
+        font-size: $_14px;
+      }
+    }
+
+    hr {
+      transform: rotate(180deg);
+      background-color: $white;
+      border: none;
+      width: 1px;
+      height: 10px;
+    }
+  }
+}

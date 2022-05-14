@@ -1,0 +1,17 @@
+.positions {
+  &__available {
+    padding: calc(12.1875rem + 2vw) 2rem 0;
+
+    @include breakpoint-up(iPadPro) {
+      padding: calc(12.1875rem + 2vw) 11vw 0;
+    }
+
+    @include breakpoint-up(large) {
+      padding: calc(14.1875rem + 2vw) 11vw 0;
+    }
+
+    &__grid {
+      row-gap: 3rem;
+    }
+  }
+}

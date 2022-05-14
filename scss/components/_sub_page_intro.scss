@@ -1,0 +1,113 @@
+.sub_page_intro {
+  position: relative;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+
+  padding: calc(10.1875rem + 2vw) 2rem 2rem;
+
+  @include breakpoint-down(phone) {
+    padding: calc(11.1875rem + 2vw) 2rem 2rem !important;
+  }
+
+  @include breakpoint-up(tablet) {
+    padding: calc(11.1875rem + 2vw) 8vw 3rem !important;
+  }
+
+  @include breakpoint-up(iPadPro) {
+    padding: calc(14.1875rem + 2vw) 8vw 4rem !important;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: calc(11.1875rem + 2vw) 11vw 4rem !important;
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  @include breakpoint-up(large) {
+    padding: calc(14.1875rem + 2vw) 10vw 6rem !important;
+  }
+
+  &__paragraphs {
+    font-size: $_18px;
+
+    p {
+      text-shadow: 3px 3px 3px rgba($color: $black, $alpha: 0.16);
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &:last-child {
+        margin: 0.75rem 0;
+
+        @include breakpoint-up(desktop) {
+          margin: 0.25rem 0;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        font-size: $_22px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $_20px;
+    margin-top: 1rem;
+
+    h1 {
+      position: relative;
+      margin-top: 0;
+
+      font-weight: 400;
+      text-shadow: 6px 4px 6px rgba($color: $black, $alpha: 0.13);
+
+      &::after {
+        content: "";
+        margin-top: 12px;
+        display: block;
+        width: 3rem;
+        background: $orange;
+        border-bottom: 5px solid $orange;
+        text-shadow: 3px 3px 6px rgba($color: $black, $alpha: 0.16);
+      }
+
+      @include breakpoint-up(iPadPro) {
+        font-size: $_50px;
+        margin-top: 40px;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: $_60px;
+      }
+    }
+  }
+
+  &__text {
+    margin: 2rem 2rem 0 0;
+    font-size: $_17px;
+    line-height: 1.6;
+
+    @include breakpoint-up(iPadPro) {
+      margin-top: 0;
+
+      font-size: $_18px;
+    }
+
+    @include breakpoint-up(desktop) {
+      width: 75%;
+
+      font-size: $_20px;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_22px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+}

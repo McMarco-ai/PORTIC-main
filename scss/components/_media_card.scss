@@ -1,0 +1,90 @@
+.media__grid__card {
+  border-radius: 10px;
+  background-color: $white;
+
+  position: relative;
+  // padding: 2rem;
+  box-shadow: 0 15px 16px rgba($color: $grey, $alpha: 0.1),
+    0 -15px 16px rgba($color: $grey, $alpha: 0.1);
+
+  @include breakpoint-down(iPadPro) {
+    padding: 0;
+    border-radius: 4px;
+  }
+
+  &::after {
+    @include breakpoint-down(iPadPro) {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 15px;
+      right: 10px;
+      left: 5%;
+      top: 80%;
+      width: 90%;
+      background: rgba($color: $grey, $alpha: 0.5);
+      box-shadow: 0 15px 16px rgba($color: $grey, $alpha: 0.5);
+      transform: rotate(3deg);
+    }
+  }
+
+  // &:nth-child(even) {
+  //   @include breakpoint-up(iPadPro) {
+  //     transform: translateY(10%);
+  //   }
+  // }
+
+  iframe {
+    width: 100%;
+    height: 12rem;
+    transition: all 0.25s ease;
+
+    border-radius: 10px 10px 0 0;
+
+    @include breakpoint-down(iPadPro) {
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 10px 0px rgba($color: $black, $alpha: 0.1),
+        0 -4px 10px 0px rgba($color: $black, $alpha: 0.1);
+    }
+
+    @include breakpoint-up(iPadPro) {
+      height: 20.375rem;
+    }
+
+    @include breakpoint-up(large) {
+      height: 26.375rem;
+    }
+  }
+
+  &__info {
+    padding: 0.5rem 1.25rem;
+
+    @include breakpoint-up(iPadPro) {
+      padding: 1.5rem 2rem;
+    }
+
+    @include breakpoint-up(desktop) {
+      padding: 1rem 2rem;
+    }
+
+    &__title {
+      font-weight: 400;
+      color: $black;
+      font-size: $_16px;
+      margin: 0;
+      line-height: 1.5;
+      letter-spacing: 0.1px;
+
+      @include breakpoint-up(iPadPro) {
+        font-size: $_19px;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: $_20px;
+      }
+    }
+  }
+}

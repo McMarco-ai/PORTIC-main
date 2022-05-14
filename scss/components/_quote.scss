@@ -1,0 +1,98 @@
+.quote {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  // height: 100vh;
+  padding: calc(4.1875rem + 2vw) 8vw;
+
+  row-gap: 2rem;
+
+  @include breakpoint-up(iPadPro) {
+    padding: calc(8.1875rem + 2vw) 8vw;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: calc(6.1875rem + 2vw) 8vw calc(6.1875rem + 1vw);
+  }
+
+  &__title {
+    font-size: $_28px;
+    font-family: $portoSans;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+
+    div {
+      margin-right: auto;
+    }
+
+    span {
+      color: $orange;
+    }
+
+    @include breakpoint-up(tablet) {
+      font-size: $_50px;
+    }
+
+    @include breakpoint-up(iPadPro) {
+      font-size: $_60px;
+      line-height: 1.8;
+    }
+
+    @include breakpoint-up(desktop) {
+      font-size: $_36px;
+      line-height: 1.4;
+      margin: 0;
+      width: 75%;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_50px;
+    }
+  }
+
+  &__img {
+    height: 12.375rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/portic.jpg");
+
+    @include breakpoint-down(phone) {
+      height: 10.375rem;
+      width: 100%;
+    }
+
+    @include breakpoint-up(tablet) {
+      height: 12.375rem;
+    }
+
+    @include breakpoint-up(desktop) {
+      height: 19.625rem;
+      width: 32.75rem;
+    }
+
+    @include breakpoint-up(large) {
+      height: 23.625rem;
+      width: 94%;
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+    font-size: $_18px;
+    line-height: 1.8;
+
+    @include breakpoint-up(large) {
+      font-size: $_20px;
+    }
+
+    span {
+      color: $orange;
+    }
+  }
+}

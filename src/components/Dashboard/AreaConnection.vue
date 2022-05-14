@@ -1,0 +1,94 @@
+<template>
+  <div class="admin_areas__panel__grid__card flex flex-ai-c flex-jc-sb">
+    <div class="flex flex-ai-c">
+      <span>{{ category }} </span>
+      <h2>{{ name }}</h2>
+    </div>
+
+    <div class="flex flex-ai-c">
+      <button
+        class="admin_areas__panel__grid__card__remove"
+        @click="deleteAreaCon"
+      >
+        Remover
+      </button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AreaConnection",
+  props: {
+    category: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    id: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    async deleteAreaCon() {
+      if (this.category === "Curso") {
+        this.$store.commit("SET_SELECTED_AC", {
+          areaId: this.$store.getters.getAdminSelectedAreaId,
+          courseId: this.id
+        });
+
+        try {
+          await this.$store.dispatch("setAdminDeleteAC");
+          await this.$store.dispatch("setAdminAreas");
+          await this.$store.dispatch("setAdminCourses");
+        } catch (error) {
+          return error;
+        }
+      } else if (this.category === "Unidade") {
+        this.$store.commit("SET_SELECTED_AU", {
+          areaId: this.$store.getters.getAdminSelectedAreaId,
+          unitId: this.id
+        });
+
+        try {
+          await this.$store.dispatch("setAdminDeleteAU");
+          await this.$store.dispatch("setAdminAreas");
+          await this.$store.dispatch("setAdminUnits");
+        } catch (error) {
+          return error;
+        }
+      } else if (this.category === "Projeto") {
+        this.$store.commit("SET_SELECTED_AP", {
+          areaId: this.$store.getters.getAdminSelectedAreaId,
+          projectId: this.id
+        });
+
+        try {
+          await this.$store.dispatch("setAdminDeleteAP");
+          await this.$store.dispatch("setAdminAreas");
+          await this.$store.dispatch("setAdminProjects");
+        } catch (error) {
+          return error;
+        }
+      } else {
+        this.$store.commit("SET_SELECTED_ACR", {
+          areaId: this.$store.getters.getAdminSelectedAreaId,
+          careerId: this.id
+        });
+
+        try {
+          await this.$store.dispatch("setAdminDeleteACR");
+          await this.$store.dispatch("setAdminAreas");
+          await this.$store.dispatch("setAdminCareers");
+        } catch (error) {
+          return error;
+        }
+      }
+    }
+  }
+};
+</script>

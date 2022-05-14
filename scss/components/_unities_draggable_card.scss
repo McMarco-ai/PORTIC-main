@@ -1,0 +1,52 @@
+.unities__card {
+  position: relative;
+  z-index: -5;
+  border-radius: 8px;
+  padding: 1.25rem 0;
+  // margin-bottom: 2rem;
+
+  @include breakpoint-up(desktop) {
+    margin-right: 2rem;
+  }
+
+  @include breakpoint-up(large) {
+    margin-right: 4rem;
+  }
+
+  &__subtitle,
+  &__title {
+    font-weight: 400;
+    font-family: $portoSansStencil;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: $grey;
+
+    @include breakpoint-up(large) {
+      font-size: $_20px;
+    }
+  }
+
+  &__title {
+    margin-top: 8px;
+    color: $white;
+    font-size: $_22px;
+
+    @include breakpoint-up(large) {
+      font-size: $_26px;
+    }
+  }
+
+  &__desc {
+    margin-top: 1.875rem;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
+    color: $lightGrey;
+
+    @include breakpoint-up(large) {
+      margin-top: 3.125rem;
+      font-size: $_18px;
+    }
+  }
+}

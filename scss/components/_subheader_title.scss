@@ -1,0 +1,52 @@
+.sub__header__title {
+  position: relative;
+  width: fit-content;
+  padding: 0 0 1rem;
+  margin: 0 0 3rem;
+
+  font-size: $_24px;
+  font-family: $portoSans;
+  color: $black;
+  font-weight: 500;
+
+  text-shadow: 6px 4px 4px rgba($color: $black, $alpha: 0.075);
+
+  &.light {
+    color: $white;
+    text-shadow: 6px 4px 4px rgba($color: $white, $alpha: 0.13);
+
+    &::after {
+      box-shadow: 3px 3px 4px rgba($color: $white, $alpha: 0.13);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    height: 2.5px;
+    width: 30px;
+    background-color: $orange;
+    box-shadow: 3px 3px 4px rgba($color: $black, $alpha: 0.13);
+
+    @include breakpoint-up(large) {
+      left: 0.75%;
+      width: 40px;
+      height: 4.5px;
+    }
+  }
+
+  @include breakpoint-up(iPadPro) {
+    font-size: $_34px;
+    margin: 0 0 5rem;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: $_36px;
+  }
+
+  .project__news & {
+    color: $black;
+  }
+}

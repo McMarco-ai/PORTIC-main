@@ -1,0 +1,137 @@
+{
+  "navbar": {
+    "items": [
+      "About Us",
+      "Unities",
+      "Areas",
+      "Courses",
+      "Projects",
+      "Medias",
+      "Careers",
+      "Site map"
+    ]
+  },
+  "homepage": {
+    "landingPage": {
+      "welcome": "Welcome to",
+      "welcomeTo": " {institution}",
+      "description": "Porto Research, Technology {0}& Innovation Center."
+    },
+    "introOne": "Meet the new infrastructure of Politécnico do Porto - ",
+    "introTwo": " - Porto Research, Technology & Innovation Center.",
+    "news": {
+      "title": "Latest news",
+      "button": "Know more",
+      "moreNews": "See all news"
+    },
+    "testimonials": {
+      "title": "Clients who trust in us",
+      "desc": "We are collecting testimonials..."
+    }
+  },
+  "news": {
+    "title": "News"
+  },
+  "footer": {
+    "timezoneArea": {
+      "title": "{weekDay}, {month} {day}."
+    },
+    "directions": {
+      "title": "How to get to PORTIC"
+    },
+    "links": {
+      "title": "Quick links"
+    },
+    "socials": {
+      "title": "Social Media"
+    }
+  },
+  "areas": {
+    "mainTitle": "Areas",
+    "secondTitle": "Areas of actuation",
+    "thirdTitle": "Explore our areas",
+    "areasInformation": "O Porto Research, Technology & Innovation Center inclui unidades e grupos com atividades em diferentes níveis de conhecimento e inovação, como também em áreas de conhecimento. Este ecossistema reforça a ideia de um ambiente que estimula sinergias, o cruzamento fértil entre áreas do conhecimento, agregando competências e equipas, fomentando a cooperação e formação de projetos conjuntos, num espaço de conhecimento, ciência, transferência e reprodução. em linha com as melhores práticas internacionais."
+  },
+  "aboutUs": {
+    "contactUs": "Contact us",
+    "contactUsTitle2": "Contact us easily",
+    "focusTitle": "We focus on",
+    "introduction": "O PORTIC -Porto Research, Technology & Innovation Center visa agregar vários centros e grupos de investigação das escolas do P.PORTO num único espaço físico, configurando uma superestrutura dedicada à investigação, transferência de tecnologia, inovação e empreendedorismo. Alojará ainda a Porto Global Hub que integra a Porto Design Factory, a Porto Business Innovation e a Startup Porto e que tem como visão ajudar a criação de projetos locais sustentáveis para uma vida melhor.",
+    "testimonialsTitle": "… and now what they say about us",
+    "testimonialsDesc": "We provide our clients the best services possible and they give us amazing feedback.",
+    "testimonialsSoon": "Collecting a lot of testimonials...",
+    "form": {
+      "name": "Name *",
+      "surname": "Surname *",
+      "email": "Email *",
+      "phone": "Phone number",
+      "content": "Tell us something *",
+      "submit": "Submit"
+    }
+  },
+  "contactBtn": "Contact us",
+  "courses": {
+    "courseKey": "Courses",
+    "title": "Explore our courses",
+    "icons": {
+      "title": "Our courses focuses",
+      "desc": "Porto Design Factory offers many educational programs, with different durations, goals and pedagogic methodologies, that groups Bachelor’s Degrees students, Master Degrees students, Doctoral Degree e After-doctoral Degree, or even professional technicians and employees."
+    }
+  },
+  "medias": {
+    "video": "Video",
+    "mediasKey": "Medias",
+    "title": "Explore our videos"
+  },
+  "entities": {
+    "title": "Entities",
+    "desc": "Investigation, development and innovation entities.",
+    "input": {
+      "placeholder": "Search entity",
+      "filter": "Alphabetical order"
+    },
+    "labels": {
+      "search": "Search",
+      "order": "Order"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "desc": "Investigation, development and innovation projects.​",
+    "input": {
+      "placeholder": "Search project",
+      "filter": "Alphabetical order",
+      "status": "Project status"
+    },
+    "labels": {
+      "search": "Search",
+      "order": "Order",
+      "status": "Project status",
+      "initialDate": "Begin date",
+      "endDate": "End date"
+    }
+  },
+  "project": {
+    "contact": "For more information, please contacts us by e-mail or phone number."
+  },
+  "unities": {
+    "unitiesKey": "Unities",
+    "title": "Explore our unities",
+    "principles": {
+      "title": "Five principles that we have in mind"
+    },
+    "card": {
+      "button": "Know more"
+    },
+    "unity": "Unity {n}"
+  },
+  "careers": {
+    "careersKey": "Careers",
+    "title3": "Available careers",
+    "card": {
+      "knowMore": "Know more",
+      "btnText": "Apply now"
+    }
+  },
+  "sitemap": "Site Map"
+}

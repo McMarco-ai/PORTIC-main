@@ -1,0 +1,34 @@
+.project__team__grid__card {
+  img {
+    border: 1px solid $black;
+    padding: 4px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: 400;
+    margin-top: 1rem;
+    font-size: $_18px;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 0.2rem;
+    font-size: $_16px;
+    color: $lightGrey;
+    text-align: center;
+  }
+
+  .remove_button {
+    background-color: $orange;
+    color: $white;
+    font-size: $_15px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    border: none;
+    padding: 0.6rem 1rem;
+  }
+}

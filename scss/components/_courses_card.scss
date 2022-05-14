@@ -1,0 +1,266 @@
+.courses__grid__card {
+  padding: 2rem 1.875rem;
+  border-top: 1px solid rgba($color: $grey, $alpha: 0.5);
+
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  @include breakpoint-up(iPadPro) {
+    padding: 2.85rem 2.875rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 2px;
+
+    @include breakpoint-up(desktop) {
+      width: 4px;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba($color: $black, $alpha: 0.1);
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba($color: $black, $alpha: 0.4);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba($color: $black, $alpha: 0.4);
+  }
+
+  &:last-child {
+    border-bottom: 1px solid rgba($color: $grey, $alpha: 0.5);
+  }
+
+  &:hover {
+    // background-color: rgba($color: $grey, $alpha: 0.15);
+    border-top: 2px solid rgba($color: $orange, $alpha: 1);
+  }
+
+  &__title {
+    font-size: $_18px;
+    font-family: $portoSans;
+    font-weight: 400;
+    color: $orange;
+
+    margin: 0;
+
+    @include breakpoint-up(iPadPro) {
+      font-size: $_22px;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_24px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    // border: 2px solid $black;
+    border-radius: 50%;
+    height: 1.625rem;
+    width: 1.625rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &__lines {
+      position: absolute;
+      width: 2px;
+      height: 12px;
+      background-color: $black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &:nth-child(1) {
+        transition: all 0.5s ease;
+      }
+
+      &:nth-child(2) {
+        transform: translate(calc(-50% + 0.25px), calc(-50% - 0.25px))
+          rotate(90deg);
+      }
+
+      &.minus {
+        &:nth-child(1) {
+          height: 0;
+        }
+      }
+
+      @include breakpoint-up(iPadPro) {
+        height: 0.75rem;
+      }
+
+      @include breakpoint-up(large) {
+        height: 1rem;
+      }
+    }
+  }
+
+  &__toggle {
+    transition: all 0.2s linear;
+
+    margin: 0;
+    font-size: $_16px;
+    letter-spacing: 0.2px;
+    line-height: 1.6;
+
+    @include breakpoint-up(iPadPro) {
+      font-size: $_18px;
+      line-height: 1.65;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_20px;
+    }
+
+    &.collapse {
+      display: none;
+    }
+
+    &.collapsing {
+      height: 0;
+      overflow: hidden;
+    }
+
+    &.open {
+      display: block;
+      transition: all 0.2s linear;
+    }
+  }
+
+  &__content {
+    padding-bottom: 2rem;
+    padding-right: 10px;
+
+    @include breakpoint-down(iPadPro) {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+
+    @include breakpoint-up(desktop) {
+      padding-bottom: 0;
+    }
+
+    &__paragraph {
+      margin: 0;
+      font-size: $_16px;
+      letter-spacing: 0.2px;
+      line-height: 1.6;
+
+      @include breakpoint-up(iPadPro) {
+        font-size: $_18px;
+        line-height: 1.65;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: $_22px;
+      }
+
+      span {
+        color: $orange;
+      }
+
+      h2 {
+        font-weight: 400;
+        margin: 0;
+        font-size: $_18px;
+        color: $grey;
+
+        @include breakpoint-up(large) {
+          font-size: $_20px;
+        }
+      }
+
+      a {
+        color: $orange;
+        text-decoration: underline;
+      }
+
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+
+          &::before {
+            content: "- ";
+            margin-right: 10px;
+          }
+        }
+      }
+
+      img {
+        margin: 1rem 0;
+        width: 100%;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: $_18px;
+      }
+    }
+
+    .connections__info {
+      margin-top: 2rem;
+
+      u {
+        font-size: $_17px;
+        margin: 0.5rem 0;
+
+        @include breakpoint-up(desktop) {
+          font-size: $_18px;
+          margin: 1rem 0;
+        }
+      }
+
+      li {
+        font-size: $_16px;
+        letter-spacing: 0.2px;
+        line-height: 1.6;
+
+        &:hover {
+          color: $black;
+        }
+
+        a {
+          color: $orange;
+
+          &:hover {
+            color: $black;
+          }
+        }
+
+        @include breakpoint-up(desktop) {
+          font-size: $_17px;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    & div {
+      width: 100% !important;
+      column-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 1rem;
+
+      @include breakpoint-up(iPadPro) {
+        width: fit-content !important;
+      }
+
+      .know__more {
+        margin-top: 0 !important;
+        font-family: $portoSansStencil;
+        font-size: $_16px;
+        padding: 0.6rem 2rem;
+        flex: 1;
+      }
+    }
+  }
+}
