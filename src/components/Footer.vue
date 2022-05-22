@@ -82,7 +82,7 @@
           <router-link :to="{ name: 'SiteMap' }">
             SiteMap
           </router-link>
-           <router-link :to="{ name: 'projectFiles' }">
+           <router-link :to="{ name: 'ProjectFiles' }">
             Fichas de projeto
           </router-link>
         </div>

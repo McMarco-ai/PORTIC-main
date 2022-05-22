@@ -56,6 +56,7 @@ import ProjectsCatalog from "../views/ProjectsCatalog.vue";
 import SiteMap from "../views/SiteMap.vue";
 import Unities from "../views/Unities.vue";
 import UnitiesPage from "../views/UnitiesPage.vue";
+import ProjectFiles from "../views/ProjectF.vue";
 
 
 Vue.use(VueRouter);
@@ -128,6 +129,11 @@ const routes = [{
         path: "/site-map",
         name: "SiteMap",
         component: SiteMap
+    },
+    {
+        path: "/project-files",
+        name: "ProjectFiles",
+        component: ProjectFiles
     },
     {
         path: "/unities",
