@@ -30,7 +30,7 @@
       </div>
 
       <div>
-        <SubHeaderTitle :text="$t('courses.courseKey')" />
+        <SubHeaderTitle :text="$t('courses.courseKey')" /> 
 
         <div class="site_map_list flex flex-fd-c">
           <ul>
@@ -130,7 +130,7 @@ export default {
       await this.$store.dispatch("setUnities");
     } catch (error) {
       return error;
-    }
+    } 
   },
   computed: {
     ...mapGetters([

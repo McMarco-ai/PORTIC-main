@@ -279,6 +279,9 @@ export default {
       "getProjectsStatus",
       "getProjects",
       "getUnities",
+      "getCourses",
+      "getAreas",
+      "getCourses"
     ]),
     projects() {
       return this.getProjects;
@@ -286,7 +289,7 @@ export default {
     getCurrentProjects() {
       let selectedProjects = this.getProjects;
 
-      console.log("HERE!");
+    
 
       // console.log(this.getSelectedProjectByID);
 

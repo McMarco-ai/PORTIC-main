@@ -82,6 +82,9 @@
           <router-link :to="{ name: 'SiteMap' }">
             SiteMap
           </router-link>
+           <router-link :to="{ name: 'projectFiles' }">
+            Fichas de projeto
+          </router-link>
         </div>
       </div>
       <div class="footer__grid__socials">

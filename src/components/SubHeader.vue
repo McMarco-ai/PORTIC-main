@@ -271,6 +271,7 @@ export default {
         default:
           break;
       }
+      
     },
     changeLangEN() {
       this.$i18n.locale = "en";
